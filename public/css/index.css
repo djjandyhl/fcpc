@@ -51,7 +51,7 @@
     background-size: 100% 100%;
     width:83vw;
     padding-bottom: 3vh;
-    position: fixed;
+    position: absolute;
     top: 14.187vh;
     left: 8.3vw;
 }

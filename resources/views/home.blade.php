@@ -4,31 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
     <title>Title</title>
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/index.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.0/css/swiper.min.css" rel="stylesheet">
-
+    <link href="/css/animate.min.css" rel="stylesheet">
 </head>
 <body class="no-mp">
 <div class="container-fluid main-bg swiper-container">
     <div class="swiper-wrapper">
         <div id="page-1" class="swiper-slide">
-            <img class="wh100 full-img" src="img/1/1.jpg">
+            <img class="wh100 full-img ani" src="img/1/0.jpg">
+            <img class="wh100 full-img ani" swiper-animate-effect="flipInX" swiper-animate-duration="1s"
+                 swiper-animate-delay="0.1s" src="img/1/2.png">
+            <img class="wh100 full-img ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s"
+                 swiper-animate-delay="0.8s" src="img/1/1.png">
         </div>
         <div id="page-2" class="swiper-slide">
-            <img class="wh100 full-img" src="img/2/1.jpg">
+            <img class="wh100 full-img ani" src="img/2/0.jpg">
+            <img class="wh100 full-img ani" swiper-animate-effect="flipInX" swiper-animate-duration="1s"
+                 swiper-animate-delay="0.1s" src="img/2/1.png">
+            <img class="wh100 full-img ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s"
+                 swiper-animate-delay="0.8s" src="img/2/2.png">
         </div>
         <div id="page-3" class="swiper-slide">
-            <img class="wh100 full-img" src="img/3/1.jpg">
+            <img class="wh100 full-img ani" src="img/3/0.jpg">
+            <img class="wh100 full-img ani" swiper-animate-effect="flipInX" swiper-animate-duration="1s"
+                 swiper-animate-delay="0.1s" src="img/3/1.png">
+            <img class="wh100 full-img ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s"
+                 swiper-animate-delay="0.8s" src="img/3/2.png">
         </div>
         <div id="page-4" class="swiper-slide">
-            <img class="wh100 full-img" src="img/4/1.jpg">
+            <img class="wh100 full-img ani" src="img/4/0.jpg">
+            <img class="wh100 full-img ani" swiper-animate-effect="flipInX" swiper-animate-duration="1s"
+                 swiper-animate-delay="0.1s" src="img/4/1.png">
+            <img class="wh100 full-img ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s"
+                 swiper-animate-delay="0.8s" src="img/4/2.png">
         </div>
         <div id="page-5" class="no-mp swiper-slide swiper-no-swiping">
             <div class="content">
                 <img src="img/5/title.png" class="title" style="display: block; width: 39.0625vw;margin: 0 auto;">
                 <div class="list" style="width: 67vw;margin: 7.936508vh auto 0">
                     @foreach($data as $group)
-                        <div class=" box">
+                        <div class="box ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s"
+                             swiper-animate-delay="0.{{$loop->iteration}}s">
                             @foreach($group['data'] as $item)
                                 <div class="item" data-logofile="img/5/logo/{{$item['logFileName']}}"
                                      style="font-size: {{$group['fontSize']}};padding: {{$group['padding']}}">{{$item['name']}}</div>
@@ -37,7 +54,9 @@
                     @endforeach
 
                 </div>
-                <img src="img/5/djpj.png" style="display: block;margin:5.4vh auto 0;max-width: 40vw;">
+                <img src="img/5/djpj.png" class="ani" swiper-animate-effect="pulse" swiper-animate-duration="1s"
+                     swiper-animate-delay="2.5s"
+                     style="display: block;margin:5.4vh auto 0;max-width: 40vw;animation-iteration-count: infinite;">
             </div>
             <div class="dialog none">
                 <div class="close"></div>
@@ -69,13 +88,14 @@
             </div>
         </div>
         <div id="page-6" class="swiper-slide">
-            <img class="wh100 full-img" src="img/6/1.jpg">
+            <img class="wh100 full-img ani" src="img/6/1.jpg">
         </div>
     </div>
 
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.0/js/swiper.min.js"></script>
+<script src="/js/swiper.animate1.0.3.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
 <script>
     var select = '';
@@ -83,6 +103,16 @@
         direction: 'vertical', // 垂直切换选项
         //autoplay: true,
         //effect : 'fade',
+        on: {
+            init: function () {
+                swiperAnimateCache(this); //隐藏动画元素
+                swiperAnimate(this); //初始化完成开始动画
+            },
+            slideChangeTransitionEnd: function () {
+                swiperAnimate(this); //每个slide切换结束时也运行当前slide动画
+                //this.slides.eq(this.activeIndex).find('.ani').removeClass('ani'); 动画只展现一次，去除ani类名
+            }
+        }
     })
     $ = mySwiper.$;
     $('.list .item').on('click', function (e) {

@@ -169,7 +169,7 @@
                 }
             })
             .catch(function (error) {
-                console.log(error);
+                alert('对不起,提交失败');
             });
     })
 </script>

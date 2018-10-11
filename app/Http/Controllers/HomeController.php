@@ -11,6 +11,7 @@ namespace App\Http\Controllers;
 
 use App\Models\UserVote;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
@@ -30,14 +31,18 @@ class HomeController extends Controller
             'shzr' => 'required|in:0,1',
             'message' => 'nullable|max:500'
         ]);
-        $user = session('wechat.oauth_user.default'); // 拿到授权用户资料
+        /*$user = session('wechat.oauth_user.default'); // 拿到授权用户资料
         $userId = $user->getId();
         $record = UserVote::where('id', $userId)->first();
         if ($record) {
             return ['code' => 201, 'message' => '你已经投过票了'];
+        }*/
+        $submit = Cookie::get('submit');
+        if ($submit === 'yes') {
+            return ['code' => 201, 'message' => '你已经投过票了'];
         }
         $result = UserVote::create([
-            'id' => $userId,
+            //'id' => $userId,
             'vote_name' => $request->name,
             'jzzl' => $request->jzzl,
             'wy' => $request->wy,
@@ -45,6 +50,7 @@ class HomeController extends Controller
             'message' => $request->message
         ]);
         if ($result) {
+            setcookie("submit", "yes");
             return ['code' => 200, 'message' => '提交成功'];
         }
     }

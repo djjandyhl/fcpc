@@ -11,10 +11,11 @@
 |
 */
 
-Route::group(['middleware' => ['fake.wechat', 'wechat.oauth']], function () {
-    Route::get('/', 'HomeController@home');
-    Route::post('/pc', 'HomeController@pc');
-});
+/*Route::group(['middleware' => ['fake.wechat', 'wechat.oauth']], function () {
+
+});*/
 //Route::get('init','HomeController@init');
+Route::get('/', 'HomeController@home');
+Route::post('/pc', 'HomeController@pc');
 Route::get('backend','HomeController@backend');
 

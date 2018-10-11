@@ -1,122 +1,157 @@
-.no-mp{
+.no-mp {
     margin: 0;
     padding: 0;
 }
-.wh100{
+
+.wh100 {
     width: 100%;
     height: 100%;
 }
-.full-img{
+
+.full-img {
     display: block;
     position: fixed;
     z-index: 2;
 }
+
 .container-fluid {
     width: 100vm;
     height: 100vh;
 }
-.main-bg{
+
+.main-bg {
     background-image: url("../img/bg.png");
 }
-#page-5 .content{
+
+.resize {
+    width: 20px;
+    height: 15px;
+    bottom: 2vh;
+    left: 48vw;
+    position: absolute;
+    z-index: 5;
+    animation-iteration-count: infinite;
+}
+
+#page-5 .content {
     margin-top: 8.928571vh;
 }
-.box{
+
+.box {
     display: -webkit-flex; /* Safari */
     display: flex;
     flex-wrap: nowrap;
-    justify-content:space-around;
-    border-bottom: dashed 1px  #a7443f;
+    justify-content: space-around;
+    border-bottom: dashed 1px #a7443f;
     margin: 3.28125vw 0;
 }
-.item{
+
+.item {
     background: url("../img/5/item-bg.png") no-repeat;
     background-size: 100% 100%;
     color: #560e13;
     padding: .05vh 2.8125vw;
     font-size: 4vw;
-    margin-bottom:1vh;
-    word-break:keep-all;/* 不换行 */
-    white-space:nowrap;/* 不换行 */
-    overflow:hidden;/* 内容超出宽度时隐藏超出部分的内容 */
+    margin-bottom: 1vh;
+    word-break: keep-all; /* 不换行 */
+    white-space: nowrap; /* 不换行 */
+    overflow: hidden; /* 内容超出宽度时隐藏超出部分的内容 */
 }
-.list .box:first-child{
+
+.list .box:first-child {
     margin-top: 0;
 }
-.list .box:last-child{
+
+.list .box:last-child {
     border: 0;
 }
-#page-5 .dialog{
+
+#page-5 .dialog {
     background: url("../img/5/dialogbg.png") no-repeat;
     background-size: 100% 100%;
-    width:83vw;
+    width: 83vw;
     padding-bottom: 3vh;
     position: absolute;
     top: 14.187vh;
     left: 8.3vw;
 }
-.none{
+
+.none {
     display: none;
 }
-.close{
+
+.close {
     background: url("../img/5/close.png") no-repeat;
     background-size: 100% 100%;
-    width:6.5vw;
+    width: 6.5vw;
     height: 3.97vh;
     position: absolute;
     top: 2.5vh;
     right: 4vw;
 }
-.dialog .logo{
+
+.dialog .logo {
     max-height: 6vh;
     margin: 5vh auto 5vh;
     display: block;
 }
-.select-form{
+
+.select-form {
     width: 56.25vw;
     margin: 0 auto;
 }
-.select-from-item{
+
+.select-from-item {
     padding: 0 0 3vh;
     margin-bottom: 3vh;
     border-bottom: dashed #a44531 1px;
 }
-.select-form .select-from-item:last-child{
-    border:  0;
+
+.select-form .select-from-item:last-child {
+    border: 0;
 }
-.select-from-item label{
+
+.select-from-item label {
     text-align: center;
     width: 18.75vw;
     display: inline-block;
 }
-.select-from-item label img{
+
+.select-from-item label img {
     max-height: 2.38vh;
 }
-.select-from-item .pj{
-    width:6vw;
+
+.select-from-item .pj {
+    width: 6vw;
     height: 6vw;
     margin: 0 0 -0.5vw 8vw;
     display: inline-block;
     background-size: 100% 100%;
 }
-.up{
+
+.up {
     background-image: url("../img/5/dialog/1-1.png");
 }
-.down{
+
+.down {
     background-image: url("../img/5/dialog/2-1.png");
 }
-.select-from-item .up.selected{
+
+.select-from-item .up.selected {
     background-image: url("../img/5/dialog/1-2.png");
 }
-.select-from-item .down.selected{
+
+.select-from-item .down.selected {
     background-image: url("../img/5/dialog/2-2.png");
 }
-.form-text{
+
+.form-text {
     position: relative;
 }
-.form-text textarea{
+
+.form-text textarea {
     display: block;
-    width:64.22vw;
+    width: 64.22vw;
     height: 21vh;
     margin: 0 auto;
     border-radius: 10px;

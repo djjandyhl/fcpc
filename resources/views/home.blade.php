@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
-    <title>Title</title>
+    <title>2018成都市房地产诚信企业评选</title>
     <link rel="stylesheet" href="css/index.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.0/css/swiper.min.css" rel="stylesheet">
     <link href="/css/animate.min.css" rel="stylesheet">
@@ -13,31 +13,35 @@
     <div class="swiper-wrapper">
         <div id="page-1" class="swiper-slide">
             <img class="wh100 full-img ani" src="img/1/0.jpg">
-            <img class="wh100 full-img ani" swiper-animate-effect="flipInX" swiper-animate-duration="1s"
+            <img class="wh100 full-img ani" swiper-animate-effect="slideInLeft" swiper-animate-duration="1s"
                  swiper-animate-delay="0.1s" src="img/1/2.png">
-            <img class="wh100 full-img ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s"
+            <img class="wh100 full-img ani" swiper-animate-effect="slideInRight" swiper-animate-duration="1s"
                  swiper-animate-delay="0.8s" src="img/1/1.png">
+            <img src="img/arrow.png" class="resize ani" swiper-animate-effect="fadeInUp">
         </div>
         <div id="page-2" class="swiper-slide">
             <img class="wh100 full-img ani" src="img/2/0.jpg">
-            <img class="wh100 full-img ani" swiper-animate-effect="flipInX" swiper-animate-duration="1s"
+            <img class="wh100 full-img ani" swiper-animate-effect="slideInLeft" swiper-animate-duration="1s"
                  swiper-animate-delay="0.1s" src="img/2/1.png">
-            <img class="wh100 full-img ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s"
+            <img class="wh100 full-img ani" swiper-animate-effect="slideInRight" swiper-animate-duration="1s"
                  swiper-animate-delay="0.8s" src="img/2/2.png">
+            <img src="img/arrow.png" class="resize ani" swiper-animate-effect="fadeInUp">
         </div>
         <div id="page-3" class="swiper-slide">
             <img class="wh100 full-img ani" src="img/3/0.jpg">
-            <img class="wh100 full-img ani" swiper-animate-effect="flipInX" swiper-animate-duration="1s"
+            <img class="wh100 full-img ani" swiper-animate-effect="slideInLeft" swiper-animate-duration="1s"
                  swiper-animate-delay="0.1s" src="img/3/1.png">
-            <img class="wh100 full-img ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s"
+            <img class="wh100 full-img ani" swiper-animate-effect="slideInRight" swiper-animate-duration="1s"
                  swiper-animate-delay="0.8s" src="img/3/2.png">
+            <img src="img/arrow.png" class="resize ani" swiper-animate-effect="fadeInUp">
         </div>
         <div id="page-4" class="swiper-slide">
             <img class="wh100 full-img ani" src="img/4/0.jpg">
-            <img class="wh100 full-img ani" swiper-animate-effect="flipInX" swiper-animate-duration="1s"
+            <img class="wh100 full-img ani" swiper-animate-effect="slideInLeft" swiper-animate-duration="1s"
                  swiper-animate-delay="0.1s" src="img/4/1.png">
-            <img class="wh100 full-img ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s"
+            <img class="wh100 full-img ani" swiper-animate-effect="slideInRight" swiper-animate-duration="1s"
                  swiper-animate-delay="0.8s" src="img/4/2.png">
+            <img src="img/arrow.png" class="resize ani" swiper-animate-effect="fadeInUp">
         </div>
         <div id="page-5" class="no-mp swiper-slide swiper-no-swiping">
             <div class="content">
@@ -146,10 +150,10 @@
         }
 
         var message = $('#message')[0].value;
-        if (message == '') {
+        /*if (message == '') {
             alert('请填写留言')
             return;
-        }
+        }*/
         axios.post('/pc', {
             name: select,
             jzzl: jzzl,

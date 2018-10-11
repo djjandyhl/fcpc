@@ -63,7 +63,7 @@ class HomeController extends Controller
 
     public function backend()
     {
-        $result = UserVote::orderByDesc('created_at')->get();
+        $result = UserVote::orderByDesc('created_at')->paginate(20);
         return view('backend', ['data' => $result]);
     }
 }

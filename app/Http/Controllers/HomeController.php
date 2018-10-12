@@ -11,7 +11,6 @@ namespace App\Http\Controllers;
 
 use App\Models\UserVote;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
@@ -37,7 +36,7 @@ class HomeController extends Controller
         if ($record) {
             return ['code' => 201, 'message' => '你已经投过票了'];
         }*/
-        $submit = Cookie::get('submit');
+        $submit = $_COOKIE["submit"];
         if ($submit === 'yes') {
             return ['code' => 201, 'message' => '你已经投过票了'];
         }

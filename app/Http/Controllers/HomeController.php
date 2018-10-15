@@ -36,9 +36,11 @@ class HomeController extends Controller
         if ($record) {
             return ['code' => 201, 'message' => '你已经投过票了'];
         }*/
-        $submit = $_COOKIE["submit"];
-        if ($submit === 'yes') {
-            return ['code' => 201, 'message' => '你已经投过票了'];
+        if (isset($_COOKIE["submit"])) {
+            $submit = $_COOKIE["submit"];
+            if ($submit === 'yes') {
+                return ['code' => 201, 'message' => '你已经投过票了'];
+            }
         }
         $result = UserVote::create([
             //'id' => $userId,

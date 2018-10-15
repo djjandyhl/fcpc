@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
     <title>2018成都市房地产诚信企业评选</title>
     <link rel="stylesheet" href="css/index.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.0/css/swiper.min.css" rel="stylesheet">
     <link href="/css/animate.min.css" rel="stylesheet">
 </head>
 <body class="no-mp">
@@ -97,10 +96,7 @@
     </div>
 
 </div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.0/js/swiper.min.js"></script>
 <script src="/js/swiper.animate1.0.3.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
 <script>
     var select = '';
     var mySwiper = new Swiper('.swiper-container', {

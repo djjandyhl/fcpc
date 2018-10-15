@@ -11,7 +11,7 @@ return [
             'padding' => '.05vh 2.8125vw',
             'fontSize' => '4vw',
             'data' => [
-                ['name' => '奥元', 'logFileName' => 'aoyuan.png'],
+                ['name' => '奥园', 'logFileName' => 'aoyuan.png'],
                 ['name' => '邦泰', 'logFileName' => 'bangtai.png'],
                 ['name' => '保利', 'logFileName' => 'baoli.png'],
                 ['name' => '复地', 'logFileName' => 'fudi.png'],

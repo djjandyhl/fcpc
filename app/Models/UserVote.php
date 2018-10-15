@@ -14,6 +14,4 @@ use Illuminate\Database\Eloquent\Model;
 class UserVote extends Model
 {
     protected $guarded = [];
-    public $incrementing = false;
-    protected $keyType = 'string';
 }

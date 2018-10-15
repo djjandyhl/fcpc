@@ -16,6 +16,6 @@
 });*/
 //Route::get('init','HomeController@init');
 Route::get('/', 'HomeController@home');
-Route::post('/pc', 'HomeController@pc');
+Route::post('/pc', 'HomeController@pc')->middleware('throttle:30,1');
 Route::get('backend','HomeController@backend');
 

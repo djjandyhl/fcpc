@@ -48,7 +48,8 @@ class HomeController extends Controller
             'jzzl' => $request->jzzl,
             'wy' => $request->wy,
             'shzr' => $request->shzr,
-            'message' => $request->message
+            'message' => $request->message,
+            'ip' => $request->ip()
         ]);
         if ($result) {
             setcookie("submit", "yes");

@@ -97,6 +97,20 @@
 
 </div>
 <script src="/js/swiper.animate1.0.3.min.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.4.0.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" charset="utf-8">
+    wx.config(<?php echo $app->jssdk->buildConfig(array('onMenuShareAppMessage', 'onMenuShareTimeline'), true) ?>);
+    wx.ready(function () {      //需在用户可能点击分享按钮前就先调用
+        var data = {
+            title: '2018成都市房地产诚信企业评选', // 分享标题
+            link: '', // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+            imgUrl: '', // 分享图标
+        };
+        wx.updateTimelineShareData(data);
+        wx.onMenuShareTimeline(data);
+    });
+</script>
+
 <script>
     var select = '';
     var mySwiper = new Swiper('.swiper-container', {

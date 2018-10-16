@@ -10,6 +10,7 @@ namespace App\Http\Controllers;
 
 
 use App\Models\UserVote;
+use EasyWeChat;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -18,7 +19,8 @@ class HomeController extends Controller
     public function home()
     {
         $arr = config('kfs.data');
-        return view('home', ['data' => $arr]);
+        $app = EasyWeChat::officialAccount();
+        return view('home', ['data' => $arr, 'app' => $app]);
     }
 
     public function pc(Request $request)

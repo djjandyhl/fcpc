@@ -19,6 +19,24 @@
     height: 100vh;
 }
 
+@keyframes rotate {
+    from {
+        transform: rotate(0deg)
+    }
+    to {
+        transform: rotate(359deg)
+    }
+}
+
+.music-on {
+    animation: rotate 3s linear infinite;
+    background-image: url("/img/icon_music_on2.png");
+}
+
+.music-off {
+    background-image: url("/img/icon_music_off2.png");
+}
+
 .main-bg {
     background-image: url("../img/bg.png");
 }

@@ -94,20 +94,25 @@
             <img class="wh100 full-img ani" src="img/6/1.jpg">
         </div>
     </div>
-
+    <div id="music" class="music-on"
+         style="position: fixed;width: 34px;height: 34px;right: 2vw;bottom:1vh;z-index: 2;background-size: 100% 100%">
 </div>
 <script src="/js/swiper.animate1.0.3.min.js"></script>
-<script src="http://res.wx.qq.com/open/js/jweixin-1.4.0.js" type="text/javascript" charset="utf-8"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" charset="utf-8">
-    wx.config(<?php echo $app->jssdk->buildConfig(array('onMenuShareAppMessage', 'onMenuShareTimeline'), true) ?>);
+    var music = new Audio();
+    music.src = '/music/1.mp3';
+    wx.config(<?php echo $app->jssdk->buildConfig(array('onMenuShareTimeline', 'onMenuShareAppMessage'), false) ?>);
     wx.ready(function () {      //需在用户可能点击分享按钮前就先调用
         var data = {
             title: '2018成都市房地产诚信企业评选', // 分享标题
-            link: '', // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
-            imgUrl: '', // 分享图标
+            desc: '欢迎点赞，恭候吐槽！', // 分享描述
+            link: 'http://fcpc.cdsihe.com/', // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+            imgUrl: 'http://fcpc.cdsihe.com/img/share.jpg', // 分享图标
         };
-        wx.updateTimelineShareData(data);
         wx.onMenuShareTimeline(data);
+        wx.onMenuShareAppMessage(data);
+        music.play();
     });
 </script>
 
@@ -181,6 +186,18 @@
             .catch(function (error) {
                 alert('对不起,提交失败');
             });
+    })
+
+    $('#music').on('click', function (e) {
+        if ($(this).hasClass('music-on')) {
+            music.pause();
+            $(this).removeClass('music-on');
+            $(this).addClass('music-off');
+        } else if ($(this).hasClass('music-off')) {
+            music.play();
+            $(this).removeClass('music-off');
+            $(this).addClass('music-on');
+        }
     })
 </script>
 </body>

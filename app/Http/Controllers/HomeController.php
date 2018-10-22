@@ -54,7 +54,8 @@ class HomeController extends Controller
             'ip' => $request->ip()
         ]);
         if ($result) {
-            setcookie("submit", "yes");
+            $exp = time() + 60 * 60 * 24 * 30;
+            setcookie("submit", "yes", $exp);
             return ['code' => 200, 'message' => '提交成功'];
         }
     }
@@ -69,6 +70,18 @@ class HomeController extends Controller
             }
         }
         DB::table('votes')->insert($data);
+    }
+
+    public function sh($id, Request $request)
+    {
+        $this->validate($request, [
+            'status' => 'required|in:0,1',
+            'id' => 'exists:user_votes,id'
+        ]);
+        $model = UserVote::find($request->id);
+        $model->status = $request->status;
+        $model->save();
+        return [];
     }
 
     public function backend()

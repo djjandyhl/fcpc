@@ -10,7 +10,7 @@
 <body class="no-mp">
 <div class="container-fluid main-bg swiper-container">
     <div class="swiper-wrapper">
-        {{--<div id="page-1" class="swiper-slide">
+        <div id="page-1" class="swiper-slide">
             <img class="wh100 full-img ani" src="img/1/0.jpg">
             <img class="wh100 full-img ani" swiper-animate-effect="slideInLeft" swiper-animate-duration="1s"
                  swiper-animate-delay="0.1s" src="img/1/2.png">
@@ -103,7 +103,7 @@
                 </div>
             </div>
 
-        </div>--}}
+        </div>
         <div id="page-5-1" class="swiper-slide">
             <div id="msg">
                 <div id="msg-content">

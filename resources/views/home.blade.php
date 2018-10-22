@@ -10,7 +10,7 @@
 <body class="no-mp">
 <div class="container-fluid main-bg swiper-container">
     <div class="swiper-wrapper">
-        <div id="page-1" class="swiper-slide">
+        {{--<div id="page-1" class="swiper-slide">
             <img class="wh100 full-img ani" src="img/1/0.jpg">
             <img class="wh100 full-img ani" swiper-animate-effect="slideInLeft" swiper-animate-duration="1s"
                  swiper-animate-delay="0.1s" src="img/1/2.png">
@@ -24,6 +24,28 @@
                  swiper-animate-delay="0.1s" src="img/2/1.png">
             <img class="wh100 full-img ani" swiper-animate-effect="slideInRight" swiper-animate-duration="1s"
                  swiper-animate-delay="0.8s" src="img/2/2.png">
+            <img src="img/arrow.png" class="resize ani" swiper-animate-effect="fadeInUp">
+        </div>
+        <div id="page-2-1" class="swiper-slide">
+            <img class="wh100 full-img ani" src="img/2_1/0.jpg">
+            <img class="wh100 full-img ani" swiper-animate-effect="slideInLeft" swiper-animate-duration="1s"
+                 swiper-animate-delay="0.1s" src="img/2_1/1.png">
+            <img class="wh100 full-img ani" swiper-animate-effect="slideInRight" swiper-animate-duration="1s"
+                 swiper-animate-delay="0.8s" src="img/2_1/2.png">
+            <img class="wh100 full-img ani" swiper-animate-effect="slideInLeft" swiper-animate-duration="1s"
+                 swiper-animate-delay="1.5s" src="img/2_1/3.png">
+            <img src="img/arrow.png" class="resize ani" swiper-animate-effect="fadeInUp">
+        </div>
+        <div id="page-2-2" class="swiper-slide">
+            <img class="wh100 full-img ani" src="img/2_2/0.jpg">
+            <img class="wh100 full-img ani" swiper-animate-effect="slideInLeft" swiper-animate-duration="1s"
+                 swiper-animate-delay="0.1s" src="img/2_2/1.png">
+            <img class="wh100 full-img ani" swiper-animate-effect="slideInRight" swiper-animate-duration="1s"
+                 swiper-animate-delay="0.8s" src="img/2_2/2.png">
+            <img class="wh100 full-img ani" swiper-animate-effect="slideInLeft" swiper-animate-duration="1s"
+                 swiper-animate-delay="1.5s" src="img/2_2/3.png">
+            <img class="wh100 full-img ani" swiper-animate-effect="slideInRight" swiper-animate-duration="1s"
+                 swiper-animate-delay="2.1s" src="img/2_2/4.png">
             <img src="img/arrow.png" class="resize ani" swiper-animate-effect="fadeInUp">
         </div>
         <div id="page-3" class="swiper-slide">
@@ -42,7 +64,7 @@
                  swiper-animate-delay="0.8s" src="img/4/2.png">
             <img src="img/arrow.png" class="resize ani" swiper-animate-effect="fadeInUp">
         </div>
-        <div id="page-5" class="no-mp swiper-slide swiper-no-swiping">
+        <div id="page-5" class="no-mp swiper-slide">
             <div class="content">
                 <img src="img/5/title.png" class="title" style="display: block; width: 39.0625vw;margin: 0 auto;">
                 <div class="list" style="width: 67vw;margin: 7.936508vh auto 0">
@@ -64,29 +86,33 @@
             <div class="dialog none">
                 <div class="close"></div>
                 <img src="img/5/logo/wanke.png" class="logo"/>
-                <div class="select-form">
-                    <div class="select-from-item" id="jzzl">
-                        <label><img src="img/5/dialog/label1.png"></label>
-                        <i class="up pj" data-no="1"></i>
-                        <i class="down pj" data-no="0"></i>
-                    </div>
-                    <div class="select-from-item" id="wy">
-                        <label><img src="img/5/dialog/label2.png"></label>
-                        <i class="up pj" data-no="1"></i>
-                        <i class="down pj" data-no="0"></i>
-                    </div>
-                    <div class="select-from-item" id="shzr">
-                        <label><img src="img/5/dialog/label3.png"></label>
-                        <i class="up pj" data-no="1"></i>
-                        <i class="down pj" data-no="0"></i>
-                    </div>
+
+                <div class="form-text">
+                    <div class="zan-txt">点赞：我为<span id="dialog-kfs"></span>打CALL<i class="up pj" data-no="1"></i></div>
+                    <textarea id="message-up" maxlength="150"></textarea>
+                    <div class="textarea-placeholder">留言区</div>
                 </div>
                 <div class="form-text">
-                    <textarea id="message"></textarea>
-                    <div id="submit" style="position: absolute;z-index:3; bottom:2vw; text-align: center;width: 100%">
-                        <img style="max-width:12.5vw" src="img/5/dialog/submit.png">
-                    </div>
+                    <div class="zan-txt">吐槽：不诚信房企<i class="down pj" data-no="0"></i></div>
+                    <textarea id="message-down" maxlength="150"></textarea>
+                    <div class="textarea-placeholder">留言区</div>
+                </div>
 
+                <div id="submit" style="text-align: center;width: 100%;margin-top: 5vh">
+                    <img style="max-width:12.5vw" src="img/5/dialog/submit.png">
+                </div>
+            </div>
+
+        </div>--}}
+        <div id="page-5-1" class="swiper-slide">
+            <div id="msg">
+                <div id="msg-content">
+                    @foreach($msg as $item)
+                    <div class="msg-content-item">
+                        <span class="msg-content-item-tittle">{{$item->vote_name}}</span><span> &nbsp：</span>
+                        <div class="msg-content-item-content">{{$item->msg}}</div>
+                    </div>
+                        @endforeach
                 </div>
             </div>
         </div>
@@ -94,8 +120,7 @@
             <img class="wh100 full-img ani" src="img/6/1.jpg">
         </div>
     </div>
-    <div id="music" class="music-on"
-         style="position: fixed;width: 34px;height: 34px;right: 2vw;bottom:1vh;z-index: 2;background-size: 100% 100%">
+    <div id="music" class="music-on" style="position: fixed;width: 34px;height: 34px;right: 2vw;bottom:1vh;z-index: 2;background-size: 100% 100%"></div>
 </div>
 <script src="/js/swiper.animate1.0.3.min.js"></script>
     <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js" type="text/javascript" charset="utf-8"></script>
@@ -136,6 +161,7 @@
     $ = mySwiper.$;
     $('.list .item').on('click', function (e) {
         select = $(this).text();
+        $('#dialog-kfs').text(select);
         var logoFile = $(this).data('logofile');
         $('.dialog .logo').attr('src', logoFile)
         $('.content').addClass('none');
@@ -145,36 +171,35 @@
         $('i').removeClass('selected');
         $('.dialog').addClass('none');
         $('.content').removeClass('none');
+        $('textarea').text('');
     });
-    $('#page-5 .dialog .pj').on('click', function (e) {
-        if ($(this).hasClass('selected')) {
-            $(this).toggleClass('selected');
+    $('#page-5 .dialog .zan-txt').on('click', function (e) {
+        if ($(this).children('.pj').hasClass('selected')) {
+            $(this).children('.pj').toggleClass('selected');
         } else {
-            $(this).toggleClass('selected');
-            $(this).prev('i').removeClass('selected');
-            $(this).next('i').removeClass('selected');
+            $(this).children('.pj').toggleClass('selected');
         }
     });
     $('#submit').on('click', function (e) {
-        var jzzl = $('#jzzl .selected').data('no');
-        var wy = $('#wy .selected').data('no');
-        var shzr = $('#shzr .selected').data('no');
-        if (jzzl === undefined || wy === undefined || shzr === undefined) {
-            alert('请点赞');
+        var up = $('.up.selected').data('no');
+        var down = $('.down.selected').data('no');
+        if (up === undefined && down === undefined) {
+            alert('请选择评价');
             return;
         }
 
-        var message = $('#message')[0].value;
+        var messageUp = $('#message-up')[0].value;
+        var messageDown = $('#message-down')[0].value;
         /*if (message == '') {
             alert('请填写留言')
             return;
         }*/
         axios.post('/pc', {
             name: select,
-            jzzl: jzzl,
-            wy: wy,
-            shzr: shzr,
-            message: message
+            up:up,
+            down:down,
+            message_up: messageUp,
+            message_down:messageDown
         })
             .then(function (response) {
                 if (response.data.code == 200) {
@@ -198,6 +223,29 @@
             $(this).removeClass('music-off');
             $(this).addClass('music-on');
         }
+    })
+    $('#message-up').on('input',function (e) {
+        if(!$('.up').hasClass('selected')){
+            $('.up').addClass('selected');
+        }
+    })
+    $('#message-down').on('input',function (e) {
+        if(!$('.down').hasClass('selected')){
+            $('.down').addClass('selected');
+        }
+    })
+    $('textarea').on('focus',function () {
+        $(this).next('.textarea-placeholder').addClass('none');
+    })
+    $('#msg-content').on('touchmove',function (e) {
+        e.stopPropagation();
+    })
+
+    $('#msg-content').on('touchstart',function (e) {
+        e.stopPropagation();
+    })
+    $('#msg-content').on('touchend',function (e) {
+        e.stopPropagation();
     })
 </script>
 </body>

@@ -90,8 +90,9 @@
     width: 83vw;
     padding-bottom: 3vh;
     position: absolute;
-    top: 14.187vh;
+    top: 3.187vh;
     left: 8.3vw;
+    height: 91.866vh;
 }
 
 .none {
@@ -119,32 +120,17 @@
     margin: 0 auto;
 }
 
-.select-from-item {
-    padding: 0 0 3vh;
-    margin-bottom: 3vh;
-    border-bottom: dashed #a44531 1px;
-}
-
-.select-form .select-from-item:last-child {
-    border: 0;
-}
-
-.select-from-item label {
-    text-align: center;
-    width: 18.75vw;
-    display: inline-block;
-}
-
-.select-from-item label img {
-    max-height: 2.38vh;
-}
-
-.select-from-item .pj {
+.form-text .pj {
     width: 6vw;
     height: 6vw;
-    margin: 0 0 -0.5vw 8vw;
+    margin: 0px 0 -1.5vw 2vw;
     display: inline-block;
     background-size: 100% 100%;
+}
+.zan-txt{
+    text-align: center;
+    color: #cb9f77;
+    margin: 5vh 0 2vh;
 }
 
 .up {
@@ -155,18 +141,25 @@
     background-image: url("../img/5/dialog/2-1.png");
 }
 
-.select-from-item .up.selected {
+.form-text .up.selected {
     background-image: url("../img/5/dialog/1-2.png");
 }
 
-.select-from-item .down.selected {
+.form-text .down.selected {
     background-image: url("../img/5/dialog/2-2.png");
 }
 
 .form-text {
     position: relative;
 }
-
+.textarea-placeholder{
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    z-index: 4;
+    color: #5d544a;
+    font-size: large;
+}
 .form-text textarea {
     display: block;
     width: 64.22vw;
@@ -175,4 +168,35 @@
     border-radius: 10px;
     background-color: #e1e1e1;
     padding: 5px;
+}
+#msg{
+    background-image: url("../img/5_1/msg_bg.png");
+    background-size: 100% 100%;
+    width: 83vw;
+    height: 136.875vw;
+    margin: 10.31vw auto 0;
+    position: relative;
+}
+#msg-content{
+    font-size: 14px;
+    position: absolute;
+    width: 77vw;
+    height: 98vw;
+    top: 32.875vw;
+    background: #ffffff;
+    padding: 3vw;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+.msg-content-item{
+    padding: 5vw 0;
+    border-bottom:dashed 1px #b5b5b5;
+}
+.msg-content-item-tittle{
+    font-weight: bold;
+}
+.msg-content-item-content{
+    text-align: left;
 }

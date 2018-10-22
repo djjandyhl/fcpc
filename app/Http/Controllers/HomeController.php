@@ -20,17 +20,18 @@ class HomeController extends Controller
     {
         $arr = config('kfs.data');
         $app = EasyWeChat::officialAccount();
-        return view('home', ['data' => $arr, 'app' => $app]);
+        $msg = DB::select('select vote_name, message_up as msg,updated_at from user_votes where up_status=1 union select vote_name, message_down as msg,updated_at from user_votes where down_status=1 order by updated_at desc');
+        return view('home', ['data' => $arr, 'app' => $app,'msg'=>$msg]);
     }
 
     public function pc(Request $request)
     {
         $this->validate($request, [
             'name' => 'required|exists:votes,name',
-            'jzzl' => 'required|in:0,1',
-            'wy' => 'required|in:0,1',
-            'shzr' => 'required|in:0,1',
-            'message' => 'nullable|max:500'
+            'up' => 'in:0,1',
+            'down' => 'in:0,1',
+            'message_up' => 'nullable|max:150',
+            'message_down' => 'nullable|max:150'
         ]);
         /*$user = session('wechat.oauth_user.default'); // 拿到授权用户资料
         $userId = $user->getId();
@@ -47,10 +48,10 @@ class HomeController extends Controller
         $result = UserVote::create([
             //'id' => $userId,
             'vote_name' => $request->name,
-            'jzzl' => $request->jzzl,
-            'wy' => $request->wy,
-            'shzr' => $request->shzr,
-            'message' => $request->message,
+            'up' => $request->get('up', 0),
+            'down' => $request->get('down', 0),
+            'message_up' => $request->message_up,
+            'message_down' => $request->message_down,
             'ip' => $request->ip()
         ]);
         if ($result) {
@@ -76,10 +77,12 @@ class HomeController extends Controller
     {
         $this->validate($request, [
             'status' => 'required|in:0,1',
-            'id' => 'exists:user_votes,id'
+            'id' => 'exists:user_votes,id',
+            'tag'=>'required|in:up,down'
         ]);
         $model = UserVote::find($request->id);
-        $model->status = $request->status;
+        $col = $request->tag.'_status';
+        $model->$col = $request->status;
         $model->save();
         return [];
     }

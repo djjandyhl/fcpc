@@ -133,7 +133,7 @@
             title: '2018成都市房地产诚信企业评选', // 分享标题
             desc: '欢迎点赞，恭候吐槽！', // 分享描述
             link: 'http://fcpc.cdsihe.com/', // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
-            imgUrl: 'http://fcpc.cdsihe.com/img/share.jpg', // 分享图标
+            imgUrl: 'http://fcpc.cdsihe.com/img/share.jpg?v=1', // 分享图标
         };
         wx.onMenuShareTimeline(data);
         wx.onMenuShareAppMessage(data);

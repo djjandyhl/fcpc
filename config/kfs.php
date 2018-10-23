@@ -9,7 +9,7 @@ return [
     'data' => [
         [
             'padding' => '.05vh 2.8125vw',
-            'fontSize' => '4vw',
+            'fontSize' => '3.8vw',
             'data' => [
                 ['name' => '奥园', 'logFileName' => 'aoyuan.png'],
                 ['name' => '邦泰', 'logFileName' => 'bangtai.png'],
@@ -20,7 +20,7 @@ return [
         ],
         [
             'padding' => '.05vh 2.8125vw',
-            'fontSize' => '4vw',
+            'fontSize' => '3.8vw',
             'data' => [
                 ['name' => '合能', 'logFileName' => 'heneng.png'],
                 ['name' => '恒大', 'logFileName' => 'hengda.png'],
@@ -30,7 +30,7 @@ return [
         ],
         [
             'padding' => '.05vh 2.8125vw',
-            'fontSize' => '4vw',
+            'fontSize' => '3.8vw',
             'data' => [
                 ['name' => '金科', 'logFileName' => 'jinke.png'],
                 ['name' => '蓝光', 'logFileName' => 'languang.png'],
@@ -40,7 +40,7 @@ return [
         ],
         [
             'padding' => '.05vh 2.8125vw',
-            'fontSize' => '4vw',
+            'fontSize' => '3.8vw',
             'data' => [
                 ['name' => '龙湖', 'logFileName' => 'longhu.png'],
                 ['name' => '绿城', 'logFileName' => 'lvcheng.png'],
@@ -50,7 +50,7 @@ return [
         ],
         [
             'padding' => '.05vh 2.8125vw',
-            'fontSize' => '4vw',
+            'fontSize' => '3.8vw',
             'data' => [
                 ['name' => '融信', 'logFileName' => 'rongxin.png'],
                 ['name' => '世茂', 'logFileName' => 'shimao.png'],
@@ -60,7 +60,7 @@ return [
         ],
         [
             'padding' => '.05vh 2.8125vw',
-            'fontSize' => '4vw',
+            'fontSize' => '3.8vw',
             'data' => [
                 ['name' => '旭辉', 'logFileName' => 'xuhui.png'],
                 ['name' => '正荣', 'logFileName' => 'zhengrong.png'],
@@ -72,7 +72,7 @@ return [
         ],
         [
             'padding' => '.05vh 1vw',
-            'fontSize' => '3.5vw',
+            'fontSize' => '3.8vw',
             'data' => [
                 ['name' => '碧桂园', 'logFileName' => 'biguiyuan.png'],
                 ['name' => '葛洲坝', 'logFileName' => 'gezhouba.png'],
@@ -82,7 +82,7 @@ return [
         ],
         [
             'padding' => '.05vh 1vw',
-            'fontSize' => '3.5vw',
+            'fontSize' => '3.8vw',
             'data' => [
                 ['name' => '中铁建', 'logFileName' => 'zhongtiejian.png'],
                 ['name' => '北大资源', 'logFileName' => 'beidazy.png'],
@@ -91,7 +91,7 @@ return [
         ],
         [
             'padding' => '.05vh 1vw',
-            'fontSize' => '3.5vw',
+            'fontSize' => '3.8vw',
             'data' => [
                 ['name' => '新城控股', 'logFileName' => 'xinchengkg.png'],
                 ['name' => '中南置地', 'logFileName' => 'zhongnanzd.png'],

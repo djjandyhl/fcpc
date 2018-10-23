@@ -13,17 +13,17 @@
         <div id="page-1" class="swiper-slide">
             <img class="wh100 full-img ani" src="img/1/0.jpg">
             <img class="wh100 full-img ani" swiper-animate-effect="slideInLeft" swiper-animate-duration="1s"
-                 swiper-animate-delay="0.1s" src="img/1/2.png">
+                 swiper-animate-delay="0.1s" src="img/1/2.png?v=1">
             <img class="wh100 full-img ani" swiper-animate-effect="slideInRight" swiper-animate-duration="1s"
-                 swiper-animate-delay="0.8s" src="img/1/1.png">
+                 swiper-animate-delay="0.8s" src="img/1/1.png?v=1">
             <img src="img/arrow.png" class="resize ani" swiper-animate-effect="fadeInUp">
         </div>
         <div id="page-2" class="swiper-slide">
-            <img class="wh100 full-img ani" src="img/2/0.jpg">
+            <img class="wh100 full-img ani" src="img/2/0.jpg?v=1">
             <img class="wh100 full-img ani" swiper-animate-effect="slideInLeft" swiper-animate-duration="1s"
-                 swiper-animate-delay="0.1s" src="img/2/1.png">
+                 swiper-animate-delay="0.1s" src="img/2/1.png?v=1">
             <img class="wh100 full-img ani" swiper-animate-effect="slideInRight" swiper-animate-duration="1s"
-                 swiper-animate-delay="0.8s" src="img/2/2.png">
+                 swiper-animate-delay="0.8s" src="img/2/2.png?v=1">
             <img src="img/arrow.png" class="resize ani" swiper-animate-effect="fadeInUp">
         </div>
         <div id="page-2-1" class="swiper-slide">
@@ -49,11 +49,11 @@
             <img src="img/arrow.png" class="resize ani" swiper-animate-effect="fadeInUp">
         </div>
         <div id="page-3" class="swiper-slide">
-            <img class="wh100 full-img ani" src="img/3/0.jpg">
+            <img class="wh100 full-img ani" src="img/3/0.jpg?v=2">
             <img class="wh100 full-img ani" swiper-animate-effect="slideInLeft" swiper-animate-duration="1s"
-                 swiper-animate-delay="0.1s" src="img/3/1.png">
+                 swiper-animate-delay="0.1s" src="img/3/1.png?v=2">
             <img class="wh100 full-img ani" swiper-animate-effect="slideInRight" swiper-animate-duration="1s"
-                 swiper-animate-delay="0.8s" src="img/3/2.png">
+                 swiper-animate-delay="0.8s" src="img/3/2.png?v=2">
             <img src="img/arrow.png" class="resize ani" swiper-animate-effect="fadeInUp">
         </div>
         <div id="page-4" class="swiper-slide">
